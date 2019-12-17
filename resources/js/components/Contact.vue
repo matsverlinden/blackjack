@@ -3,10 +3,12 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Dashboard Component</div>
+                    <div class="card-header">Contact Component</div>
 
                     <div class="card-body">
-                        I'm an Dashboard component.
+                        I'm an Contact component.
+
+
                     </div>
                 </div>
             </div>
@@ -17,7 +19,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Dashboard mounted.')
+            console.log('Contact mounted.')
         }
     }
 </script>
