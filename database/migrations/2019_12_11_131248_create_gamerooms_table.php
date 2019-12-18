@@ -15,8 +15,9 @@ class CreateGameroomsTable extends Migration
     {
         Schema::create('gamerooms', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('test');
             $table->integer('created_by_player_id');
-            $table->dateTime('title');
+            $table->string('title');
             $table->timestamps();
         });
     }
