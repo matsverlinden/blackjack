@@ -6,7 +6,7 @@
                     <div class="card-header">Dashboard Component</div>
 
                     <div class="card-body">
-                        the Dashboard Content has been milked
+                       I'm a Dashboard Component
                     </div>
                 </div>
             </div>

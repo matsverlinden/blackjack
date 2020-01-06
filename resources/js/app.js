@@ -5,7 +5,7 @@
  */
 
 import VueRouter from 'vue-router';
-require('./bootstrap');
+import 'bootstrap';
 
 
 window.Vue = require('vue');
@@ -22,13 +22,13 @@ Vue.use(VueRouter);
 
 // require components
 const dashboard = require('./components/Dashboard.vue').default;
-const about = require('./components/About.vue').default;
+const rules = require('./components/Rules.vue').default;
 const contact = require('./components/Contact.vue').default;
 
 // link routes to components
 const routes = [
     { path : '/', component : dashboard },
-    { path : '/about', component : about },
+    { path : '/rules', component : rules },
     { path : '/contact', component : contact },
     ];
 

@@ -7,8 +7,6 @@
 
                     <div class="card-body">
                         I'm an Contact component.
-
-
                     </div>
                 </div>
             </div>
