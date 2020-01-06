@@ -4,9 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-import VueRouter from 'vue-router';
-import 'bootstrap';
-
+require('./bootstrap');
 
 window.Vue = require('vue');
 
@@ -18,23 +16,10 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-Vue.use(VueRouter);
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-// require components
-const dashboard = require('./components/Dashboard.vue').default;
-const rules = require('./components/Rules.vue').default;
-const contact = require('./components/Contact.vue').default;
-
-// link routes to components
-const routes = [
-    { path : '/', component : dashboard },
-    { path : '/rules', component : rules },
-    { path : '/contact', component : contact },
-    ];
-
-const router = new VueRouter({
-    routes
-});
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -44,5 +29,4 @@ const router = new VueRouter({
 
 const app = new Vue({
     el: '#app',
-    router
 });
