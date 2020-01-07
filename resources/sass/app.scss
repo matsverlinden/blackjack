@@ -4,13 +4,54 @@
 // Variables
 @import 'variables';
 
-//// Bootstrap
-//@import '~bootstrap/scss/bootstrap';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
 
-.body {
-  background-color: red;
+// nav
+.navbar-laravel {
+  background-color:#24292e !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  color: rgb(214, 216, 218) !important;
+ }
+
+.navbar-light .navbar-brand {
+ color: white !important;
 }
 
-.noListStyling {
-  list-style-type: none;
+#navbarDropdown {
+  color: white;
+}
+
+.nav-link{
+  color: white !important;
+}
+
+.dropdown-menu {
+  background-color:rgb(49, 54, 63) !important;
+  color: white;
+}
+
+.dropdown-item {
+  color:white;
+}
+
+// dark theme
+body {
+  color: hsla(0,0%,100%,.7);
+  background-color: #24292e !important;
+}
+
+table {
+  color: white !important;
+}
+
+.nostylingbutton {
+  background-color: transparent;
+  border: none;
+  color: rgb(52, 144, 220);
+}
+
+.card {
+  background-color: rgb(49, 54, 63) !important;
+  color: white;
 }
