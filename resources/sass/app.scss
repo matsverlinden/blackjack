@@ -7,51 +7,12 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// nav
-.navbar-laravel {
-  background-color:#24292e !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  color: rgb(214, 216, 218) !important;
- }
-
-.navbar-light .navbar-brand {
- color: white !important;
-}
-
-#navbarDropdown {
-  color: white;
-}
-
-.nav-link{
-  color: white !important;
-}
-
-.dropdown-menu {
-  background-color:rgb(49, 54, 63) !important;
-  color: white;
-}
-
-.dropdown-item {
-  color:white;
-}
-
-// dark theme
-body {
+html, body {
+  background-color: #24292e;
   color: hsla(0,0%,100%,.7);
-  background-color: #24292e !important;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
 }
 
-table {
-  color: white !important;
-}
-
-.nostylingbutton {
-  background-color: transparent;
-  border: none;
-  color: rgb(52, 144, 220);
-}
-
-.card {
-  background-color: rgb(49, 54, 63) !important;
-  color: white;
-}

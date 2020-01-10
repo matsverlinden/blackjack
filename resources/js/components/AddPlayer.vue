@@ -7,7 +7,7 @@
                 <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quas tempore expedita aliquid autem dolorum iure dolores placeat laboriosam! Illum, adipisci quae? Ratione vel sunt corporis deleniti, assumenda repellendus eos.</p><br>
                 <form @submit.prevent="addPlayer">
                     <div class="form-group">
-                        <input type="text" class="form-control" v-model="player.name">
+                        <input type="text" class="form-control bg-dark text-white text-center" v-model="player.name">
                     </div>
                     <button type="submit" class="btn btn-success">Register</button>
                 </form>
