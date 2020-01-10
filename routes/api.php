@@ -20,3 +20,8 @@ Route::get('players', 'PlayerController@index');
 Route::group(['prefix' => 'player'], function () {
     Route::post('add', 'PlayerController@add');
 });
+
+Route::apiResource('Gamerooms','GameroomController');
+
+// http://blackjack.test/api/gamerooms doesnt work yet
+// no data is being send to the api 
