@@ -11,9 +11,9 @@ class Gameroom extends Model
     protected $fillable = ['player_id' ,'title'];
     
 
-    public function player()
-        {
-            return $this->belongsTo(Player::class, 'player_id');
-        }
+    // public function player()
+    //     {
+    //         return $this->belongsTo(Player::class, 'player_id');
+    //     }
 
 }

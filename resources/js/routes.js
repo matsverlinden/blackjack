@@ -1,7 +1,8 @@
 import StartPlayer from './components/StartPlayer.vue';
 import AddPlayer from './components/AddPlayer.vue';
-import Gameroom from './components/Gameroom.vue'; 
-
+import AddGameroom from './components/AddGameroom.vue';
+import AllGamerooms from './components/AllGamerooms.vue'; 
+ 
 export const routes = [
     {
         name: 'home',
@@ -14,8 +15,13 @@ export const routes = [
         component: AddPlayer
     },
     {
-        name: 'gameroom',
-        path: '/gameroom',
-        component: Gameroom
+        name: 'addgameroom',
+        path: '/addgameroom',
+        component: AddGameroom
+    },
+    {
+        name: 'allgameroom',
+        path: '/allgameroom',
+        component: AllGamerooms
     }
 ];
