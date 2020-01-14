@@ -25,8 +25,8 @@ Route::group(['prefix' => 'player'], function () {
 // Gameroom Routes
 Route::get('gamerooms','GameroomController@index');
 Route::group(['prefix' => 'gameroom'], function () {
-    route::post('add', 'GameroomController@add');
-    // Route::get('edit/{id}', 'GameroomController@edit');
-    // Route::post('update/{id}', 'GameroomController@update');
-    // Route::delete('delete/{id}', 'GameroomController@delete');
+    Route::post('add', 'GameroomController@add');
+    Route::get('edit/{id}', 'GameroomController@edit');
+    Route::post('update/{id}', 'GameroomController@update');
+    Route::delete('delete/{id}', 'GameroomController@delete');
 });

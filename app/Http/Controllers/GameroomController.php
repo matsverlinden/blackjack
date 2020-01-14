@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Gameroom;
+use App\Http\Resources\GameroomCollection;
+use App\Gameroom;
+use App\Player;
 
 class GameroomController extends Controller
 {
@@ -18,7 +20,10 @@ class GameroomController extends Controller
     public function index()
     {
         $gamerooms = Gameroom::all()->toArray();
+        $players = Player::all()->toArray();
+    
         return array_reverse($gamerooms);
+        
     }
 
     // Create gameroom
@@ -32,5 +37,32 @@ class GameroomController extends Controller
         ]);
 
         $gameroom->save();
+
+        return response()->json('The Lobby has been created');
+    }
+
+    // edit
+    public function edit($id)
+    {
+        $gameroom = Gameroom::find($id);
+        return response()->json($gameroom);
+    }
+
+    // update book
+    public function update($id, Request $request)
+    {
+        $gameroom = Gameroom::find($id);
+        $gameroom->update($request->all());
+
+        return response()->json('The lobby successfully updated');
+    }
+
+    // delete book
+    public function delete($id)
+    {
+        $gameroom = Gameroom::find($id);
+        $gameroom->delete();
+
+        return response()->json('The lobby successfully deleted');
     }
 }
