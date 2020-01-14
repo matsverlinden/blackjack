@@ -24,4 +24,4 @@ class PlayerController extends Controller
 
         return response()->json('The name have successfully stored in the database!');
     }
-}
+
