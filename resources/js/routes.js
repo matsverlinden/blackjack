@@ -1,21 +1,15 @@
-import AllBooks from './components/AllBooks.vue';
-import AddBook from './components/AddBook.vue';
-import EditBook from './components/EditBook.vue';
+import StartPlayer from './components/StartPlayer.vue';
+import AddPlayer from './components/AddPlayer.vue';
 
 export const routes = [
     {
         name: 'home',
         path: '/',
-        component: AllBooks
+        component: StartPlayer
     },
     {
         name: 'add',
         path: '/add',
-        component: AddBook
-    },
-    {
-        name: 'edit',
-        path: '/edit/:id',
-        component: EditBook
+        component: AddPlayer
     }
 ];
