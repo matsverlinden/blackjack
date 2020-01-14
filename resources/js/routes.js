@@ -1,8 +1,8 @@
 import StartPlayer from './components/StartPlayer.vue';
 import AddPlayer from './components/AddPlayer.vue';
-import AddGameroom from './components/AddGameroom.vue';
-import AllGamerooms from './components/AllGamerooms.vue'; 
-import EditGameroom from './components/EditGameroom.vue'; 
+import CreateGameroom from './components/CreateGameroom.vue';
+import Gamerooms from './components/Gamerooms.vue'; 
+import ShowGameroom from './components/ShowGameroom.vue'; 
 
 export const routes = [
     {
@@ -16,18 +16,19 @@ export const routes = [
         component: AddPlayer
     },
     {
-        name: 'addgameroom',
-        path: '/addgameroom',
-        component: AddGameroom
+        name: 'createroom',
+        path: '/createroom',
+        component: CreateGameroom
     },
     {
-        name: 'allgamerooms',
-        path: '/allgameroom',
-        component: AllGamerooms
+        name: 'gamerooms',
+        path: '/gamerooms',
+        component: Gamerooms
     },
     {
-        name:'editgameroom',
-        path: '/editgameroom',
-        component: EditGameroom
+        name: 'showroom',
+        path: '/showroom/:id',
+        component: ShowGameroom
     }
+    
 ];

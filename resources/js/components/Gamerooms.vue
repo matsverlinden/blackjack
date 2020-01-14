@@ -14,7 +14,7 @@
                 <tr v-for="gameroom in gamerooms" :key="gameroom.id">
                     <td>{{ gameroom.id }}</td>
                     <td>{{ gameroom.player_id }} </td>
-                    <td>{{ gameroom.title }}</td>
+                    <td>{{ gameroom.name }}</td>
                 </tr>
             </tbody>
         </table>
@@ -23,6 +23,9 @@
 
 <script>
     export default {
+        mounted() {
+            console.log('Gamerooms mounted.')
+        },
         data() {
             return {
                 gamerooms: []
@@ -32,18 +35,9 @@
             this.axios
                 .get('api/gamerooms')
                 .then(response => {
-                    this.gamerooms = response.data;
+                    console.log(response);
+                    this.gamerooms = response.data.gamerooms;
                 });
         },
-        methods: {
-            deleteGameroom(id) {
-                this.axios
-                    .delete('api/gamerooms/delete/${id}')
-                    .then(response => {
-                        let i = this.gamerooms.map(item => item.id).indexOf(id); // find index of your object
-                        this.gamerooms.splice(i, 1)
-                    });
-            }
-        }
     }
 </script>

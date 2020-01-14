@@ -17,7 +17,7 @@ class CreateGameroomsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('player_id')->unsigned()->nullable();
             $table->foreign('player_id')->references('id')->on('players');
-            $table->string('title');
+            $table->string('name');
             $table->timestamps();
         });
     }

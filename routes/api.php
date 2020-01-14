@@ -16,7 +16,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Playercontroller Routes
+// Player Routes
 Route::get('players', 'PlayerController@index');
 Route::group(['prefix' => 'player'], function () {
     Route::post('add', 'PlayerController@add');
@@ -25,8 +25,7 @@ Route::group(['prefix' => 'player'], function () {
 // Gameroom Routes
 Route::get('gamerooms','GameroomController@index');
 Route::group(['prefix' => 'gameroom'], function () {
-    Route::post('add', 'GameroomController@add');
-    Route::get('edit/{id}', 'GameroomController@edit');
-    Route::post('update/{id}', 'GameroomController@update');
-    Route::delete('delete/{id}', 'GameroomController@delete');
+    Route::post('createroom', 'GameroomController@create');
+    Route::get('show/{gameroom}', 'GameroomController@show');
+    
 });

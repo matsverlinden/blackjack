@@ -10,13 +10,13 @@ import {routes} from './routes';
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 
-//  what is this
+
 const router = new VueRouter({
     mode: 'history',
     routes: routes
 });
 
-// render h?
+
 const app = new Vue({
     el: '#app',
     router: router,

@@ -13,7 +13,7 @@ class GameroomsTableSeeder extends Seeder
     {
         DB::table('gamerooms')->insert([
             'player_id' => 1,
-            'title' => Str::random(10),
+            'name' => Str::random(10),
             'created_at' =>NOW(),
             'updated_at' =>NOW(),
         ]);
