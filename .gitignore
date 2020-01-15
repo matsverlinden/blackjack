@@ -115,3 +115,7 @@ fabric.properties
 dist/
 
 # End of https://www.gitignore.io/api/vuejs,laravel,phpstorm
+.idea/blackjack.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
