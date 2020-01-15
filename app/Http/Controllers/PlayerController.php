@@ -15,6 +15,7 @@ class PlayerController extends Controller
         return array_reverse($players);
     }
 
+    // validation?
     public function add(Request $request)
     {
         $player = new Player([
